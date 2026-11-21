@@ -3,8 +3,8 @@ import { tanstackStart } from '@tanstack/react-start/plugin/vite'
 import viteReact from '@vitejs/plugin-react'
 import { nitro } from 'nitro/vite'
 
-// Explicit vercel preset: Lovable-style apps that default Nitro to Cloudflare
-// return 404 on Vercel until this preset (or NITRO_PRESET=vercel) is set.
+// Explicit Vercel target for this sample. The deployed version already used
+// this preset; a failing Cloudflare-preset deployment was not tested.
 // Docs: https://tanstack.com/start/latest/docs/framework/react/guide/hosting
 // Docs: https://nitro.build/deploy/providers/vercel
 const config = defineConfig({

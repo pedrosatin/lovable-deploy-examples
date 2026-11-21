@@ -8,9 +8,9 @@ Repositório público de exemplo para o tutorial **como publicar um app feito co
 
 | Pasta | Stack | O que demonstra |
 | --- | --- | --- |
-| `spa/` | Vite + React + React Router | SPA estática. Precisa de rewrite (`public/_redirects` na Cloudflare Pages, `vercel.json` na Vercel) para a rota `/sobre` abrir no reload. |
+| `spa/` | Vite + React + React Router | SPA estática. No Pages, sem `404.html` na raiz, o fallback SPA é automático; o exemplo também declara `public/_redirects`. Na Vercel, `vercel.json` configura o rewrite para abrir `/sobre` no reload. |
 | `ssr-cloudflare/` | TanStack Start + `@cloudflare/vite-plugin` | SSR em **Cloudflare Workers** (não é Pages só estático). |
-| `ssr-vercel/` | TanStack Start + Nitro (`preset: "vercel"`) | SSR na Vercel com Nitro. Sem o preset da Vercel, o sintoma clássico é `404: NOT_FOUND`. |
+| `ssr-vercel/` | TanStack Start + Nitro (`preset: "vercel"`) | SSR na Vercel com Nitro. O exemplo já inclui o preset da Vercel; não foi ensaiado um deploy com preset Cloudflare que falhasse antes. Um 404 também pode ter outras causas, como pasta raiz ou saída incorreta. |
 
 ## Subdomínios de teste (pedrosatin.com)
 
@@ -44,3 +44,5 @@ cd ssr-vercel && npm install && npm run build
 - TanStack Start hosting: https://tanstack.com/start/latest/docs/framework/react/guide/hosting
 - Nitro Vercel: https://nitro.build/deploy/providers/vercel
 - Vercel rewrites: https://vercel.com/docs/project-configuration#rewrites
+
+O domínio precisa ser registrado e renovado à parte. Vercel Hobby é para uso pessoal não comercial, conforme https://vercel.com/docs/limits/fair-use-guidelines#commercial-usage.
