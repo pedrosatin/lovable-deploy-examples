@@ -18,7 +18,7 @@ Repositório público de exemplo para o tutorial **como publicar um app feito co
 | --- | --- | --- |
 | SPA | Cloudflare Pages | `demo-spa-cf.pedrosatin.com` (Pages Active) |
 | SPA | Vercel | `demo-spa-vercel.pedrosatin.com` |
-| SSR | Cloudflare Workers | `demo-ssr-cf.pedrosatin.com` |
+| SSR | Cloudflare Workers | `demo-ssr-cf.pedrosatin.com` (Workers domain Active) |
 | SSR | Vercel | `demo-ssr-vercel.pedrosatin.com` |
 
 ## Comandos locais
